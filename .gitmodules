@@ -1,0 +1,6 @@
+[submodule "wp-content/plugins/celestia-web-raid"]
+	path = wp-content/plugins/celestia-web-raid
+	url = https://github.com/ezsoftware/celestia-web-raid-plugin.git
+[submodule "wp-content/plugins/celestia-web-lodestone"]
+	path = wp-content/plugins/celestia-web-lodestone
+	url = https://github.com/ezsoftware/celestia-web-lodestone-plugin.git
