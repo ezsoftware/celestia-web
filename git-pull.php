@@ -1,3 +1,3 @@
 <?php
-  $output = shell_exec('../dev_deploy');
+  $output = shell_exec('~/deploy/');
   echo "<pre>$output</pre>";
