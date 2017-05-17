@@ -31,7 +31,7 @@
 	function cel_members_not_logged_in ($params, $content = null){
 	  //check tha the user is logged in
 	  if ( !is_user_logged_in() ){
-	 
+		echo 'here';
 		//user is logged in so show the content
 		return $content;
 	 
@@ -47,4 +47,4 @@
 	}
 	 
 	//add a shortcode which calls the above function
-	add_shortcode('members-not-logged_in', 'cel_members_not_logged_in' );
+	add_shortcode('members_not_logged_in', 'cel_members_not_logged_in' );
