@@ -33,7 +33,7 @@
 	  if ( !is_user_logged_in() ){
 		  
 		//user is logged in so show the content
-		return $content;
+		return do_shortcode($content);
 	 
 	  }
 	 
