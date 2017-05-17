@@ -31,7 +31,7 @@
 	function cel_members_not_logged_in ($params, $content = null){
 	  //check tha the user is logged in
 	  if ( !is_user_logged_in() ){
-		echo 'here';
+		  
 		//user is logged in so show the content
 		return $content;
 	 
