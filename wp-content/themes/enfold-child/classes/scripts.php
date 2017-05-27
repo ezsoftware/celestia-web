@@ -16,5 +16,7 @@ class CW_Scripts {
   
   public function enfold_enqueue_styles() {
 		wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+
+    wp_enqueue_script('lodash', 'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js', array(), '4.17.4', false);
 	}
 }
