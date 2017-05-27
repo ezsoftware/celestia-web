@@ -42,11 +42,11 @@
               playerFC.innerHTML = s_data.free_company;
 
               $('#field_1_4').after(playerContainer);
-              $('#input_6').val(s_data.character_id);
+              $('#input_6').val(s_data.id);
             }
           }
         }
-        $('.overlay').remove();
+        //$('.overlay').remove();
         console.log(s_data);
       })
       .fail(function(response) {

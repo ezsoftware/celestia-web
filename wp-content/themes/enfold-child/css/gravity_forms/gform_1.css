@@ -1,0 +1,25 @@
+.overlay {
+  display: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: RGBA(0,0,0,0.5);
+}
+
+.overlay-text {
+  height: 150px;
+  width: 500px;
+  max-width: 100%;
+  background-color: white;
+  box-shadow: 0 0 4px white;
+}
+
+.overlay-loader {
+  background-image: url('../images/loader-spinner-32.gif');
+  height: 150px;
+  width: 150px;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}

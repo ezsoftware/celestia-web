@@ -55,12 +55,18 @@ class CW_GravityForms {
 
   public function add_gform_scripts( $form, $is_ajax=true ) {
     wp_enqueue_script('lodash', 'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js', array(), '4.17.4', false);
-    
+
     $formId = $form['id'];
     $formPath = get_stylesheet_directory() . '/js/gravity_forms/gform_' . $formId . '.js';
     $formUri = dirname(get_stylesheet_uri()) . '/js/gravity_forms/gform_' . $formId . '.js';
     if(file_exists($formPath)) {
       wp_enqueue_script('gform-' . $formId, $formUri, array(), 1, true);
+    }
+
+    $formPath = get_stylesheet_directory() . '/css/gravity_forms/gform_' . $formId . '.css';
+    $formUri = dirname(get_stylesheet_uri()) . '/css/gravity_forms/gform_' . $formId . '.css';
+    if(file_exists($formPath)) {
+      wp_enqueue_style('gform-' . $formId, $formUri);
     }
   }
 }
