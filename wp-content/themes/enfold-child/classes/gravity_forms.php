@@ -10,6 +10,7 @@ class CW_GravityForms {
     return self::$instance;
   }
   private function __construct() {
+    echo "here";
     add_filter( 'gform_field_content', array($this, 'filter_gf_select_optgroup'), 10, 2 );
   }
 
