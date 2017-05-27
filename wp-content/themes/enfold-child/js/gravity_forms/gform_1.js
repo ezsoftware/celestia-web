@@ -47,7 +47,7 @@
               playerContainer.appendChild(playerFC);
 
               $(playerContainer).insertAfter($('li#field_1_4'));
-              $('#input_6').val(p_data.id);
+              $('#input_1_6').val(p_data.id);
             }
           }
         }
