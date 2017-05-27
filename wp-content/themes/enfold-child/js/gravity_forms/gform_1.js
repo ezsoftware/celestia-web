@@ -5,11 +5,8 @@
     , $world = $('#input_1_5')
     , $all = $name.add($world);
 
-  function searchPlayer() {
-    var fName = $fName.val()
-      , lName = $lName.val()
-      , world = $world.val()
-      , data = {
+  function searchPlayer(fname, lname, world) {
+    var data = {
         action: 'cw_searchCharacter',
         first_name: fname,
         last_name: lname,
@@ -25,5 +22,13 @@
       })
   }
 
-  $name.blur()
+  $name.blur(function() {
+    var fname = $fName.val()
+      , lname = $lName.val()
+      , world = $world.val();
+
+    if(fname.length > 0, lname.length > 0, world.length > 0) {
+      searchPlayer(fname, lname, world);
+    }
+  })
 })(jQuery);
