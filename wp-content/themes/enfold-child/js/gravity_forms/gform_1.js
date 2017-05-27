@@ -28,7 +28,7 @@
       , lname = $lName.val()
       , world = $world.val();
 
-    if(fname.length > 0, lname.length > 0, world.length > 0) {
+    if(fname.length > 0 && lname.length > 0 && world.length > 0) {
       searchPlayer(fname, lname, world);
     }
   }));
