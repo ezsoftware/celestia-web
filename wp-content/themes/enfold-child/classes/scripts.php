@@ -12,6 +12,7 @@ class CW_Scripts {
 
   private function __construct() {
 	  add_action( 'wp_enqueue_scripts', array($this, 'enfold_enqueue_styles') );
+    add_action( 'admin_enqueue_scripts', array($this, 'enfold_enqueue_styles') );
   }	
   
   public function enfold_enqueue_styles() {
