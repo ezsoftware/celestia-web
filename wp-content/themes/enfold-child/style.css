@@ -8,21 +8,3 @@
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  enfold-child
 */
-
-
-.gfield_password_strength .blank {
-  background-color: #444;
-  border: 1px solid #222;
-}
-
-.gfield_password_strength .strong {
-  background-color: #32CD32;
-}
-
-.gfield_password_strength .good {
-  background-color: #FFA500;
-}
-
-.gfield_password_strength .bad, .gfield_password_strength .short {
-  background-color: #8B0000;
-}
