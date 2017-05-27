@@ -1,25 +1,36 @@
 .overlay {
-  display: fixed;
   height: 100%;
   width: 100%;
   left: 0;
   top: 0;
   background-color: RGBA(0,0,0,0.5);
+  position: fixed;
 }
 
-.overlay-text {
+.overlay-text-container {
   height: 150px;
-  width: 500px;
+  width: 350px;
   max-width: 100%;
   background-color: white;
   box-shadow: 0 0 4px white;
+  top: calc(50% - 75px);
+  position: absolute;
+  left: calc(50% - 175px);
 }
 
-.overlay-loader {
-  background-image: url('../images/loader-spinner-32.gif');
-  height: 150px;
-  width: 150px;
-  background-size: 80%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+  .overlay-loader {
+    background-image: url('../images/loader-spinner-32.gif');
+    height: 150px;
+    width: 150px;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .overlay-text {
+    width: 200px;
+    vertical-align: middle;
+  }
+

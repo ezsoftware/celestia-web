@@ -10,7 +10,7 @@
   function searchPlayer(fname, lname, world) {
     var overlay = document.createElement('div');
     overlay.className = 'overlay';
-    overlay.innerHTML = "<div class='overlay-text'><span class='overlay-loader'></span> Searching Lodestone for your Character...</div>";
+    overlay.innerHTML = "<div class='overlay-text-container'><span class='overlay-loader'></span><span class='overlay-text'>Searching Lodestone for your Character...</span></div>";
     $(overlay).appendTo($('body'));
 
     var data = {
