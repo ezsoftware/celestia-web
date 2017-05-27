@@ -13,6 +13,7 @@
     overlay.innerHTML = "<div class='overlay-text-container'><span class='overlay-loader'></span><span class='overlay-text'>Searching Lodestone for your Character...</span></div>";
     $(overlay).appendTo($('body'));
     $('li.player-box').remove();
+    $('#input_1_6').val('');
 
     var data = {
         action: 'cw_searchCharacter',
