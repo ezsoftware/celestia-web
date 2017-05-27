@@ -11,7 +11,7 @@
     var overlay = document.createElement('div');
     overlay.className = 'overlay';
     overlay.innerHTML = "<div class='overlay-text'><span class='overlay-loader'></span> Searching Lodestone for your Character...</div>";
-    $(overlay).appendTo($(body));
+    $(overlay).appendTo($('body'));
 
     var data = {
         action: 'cw_searchCharacter',
