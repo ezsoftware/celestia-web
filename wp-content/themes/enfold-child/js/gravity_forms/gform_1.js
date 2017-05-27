@@ -4,6 +4,7 @@
     , $lName = $('#input_1_4_6')
     , $name = $fName.add($lName)
     , $world = $('#input_1_5')
+    , $found = $('#input_1_6')
     , $all = $name.add($world);
 
   function searchPlayer(fname, lname, world) {
@@ -16,7 +17,31 @@
 
     $.post(ajaxurl, data)
       .done(function(response) {
-        console.log(response);
+        var s_data = JSON.parse(response);
+        if(s_data.length == 0) {
+          $found.val('false');
+        } else {
+          for(var i = 0; i < s_data.length; i++) {
+            if(s_data.name == ($fname.val() + " " + $lname.val())) {
+
+              var playerContainer = document.createElement("li");
+              var playerImage = document.createElement('img');
+              var playerName = document.createElement('span');
+              var playerWorld = document.createElement('span');
+              var playerFC = document.createElement('span');
+
+              playerContainer.className = "player-box";
+              playerImage.src = "/wp-content/themes/enfold-child/image_proxy.php?url=" . s_data.face;
+              playerName.innerHTML = s_data.name;
+              playerWorld.innerHTML = s_data.world;
+              playerFC.innerHTML = s_data.free_company;
+
+              $('#field_1_4').after(playerContainer);
+              $('#input_6').val('true');
+            }
+          }
+        }
+        console.log(s_data);
       })
       .fail(function(response) {
         console.error(response);
