@@ -14,6 +14,7 @@ class CW_GForm_1 {
   }
 
   public function form_1_4_validation($result, $value, $form, $field) {
+    var_dump($value);
     if(!preg_match("[^A-Za-z0-9\s_\-\']", $value)) {
       $result['is_valid'] = true;
     } else {
