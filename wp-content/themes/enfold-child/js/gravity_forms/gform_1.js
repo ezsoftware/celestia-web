@@ -52,7 +52,6 @@
           }
         }
         $('.overlay').remove();
-        console.log(s_data);
       })
       .fail(function(response) {
         console.error(response);
