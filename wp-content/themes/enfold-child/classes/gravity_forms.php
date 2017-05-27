@@ -1,14 +1,6 @@
 <?php
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
-/** https://gist.github.com/codearachnid/a06e13be7f01b81b838c
- * Filter Gravity Forms select field display to wrap optgroups where defined
- * USE:
- * set the value of the select option to `optgroup` within the form editor. The 
- * filter will then automagically wrap the options following until the start of 
- * the next option group
- */
-
 class CW_GravityForms {  
   static $instance = null;
   public static function getInstance() {
@@ -22,6 +14,13 @@ class CW_GravityForms {
   }
 
   public function filter_gf_select_optgroup( $input, $field ) {
+    /** https://gist.github.com/codearachnid/a06e13be7f01b81b838c
+    * Filter Gravity Forms select field display to wrap optgroups where defined
+    * USE:
+    * set the value of the select option to `optgroup` within the form editor. The 
+    * filter will then automagically wrap the options following until the start of 
+    * the next option group
+    */
     if ( $field->type == 'select' ) {
       $opt_placeholder_regex = strpos($input,'gf_placeholder') === false ? '' : "<\s*?option.*?class='gf_placeholder'>[^<>]+<\/option\b[^>]*>";
       $opt_regex = "/<\s*?select\b[^>]*>" . $opt_placeholder_regex . "(.*?)<\/select\b[^>]*>/i";
