@@ -22,7 +22,7 @@
           $found.val('false');
         } else {
           for(var i = 0; i < s_data.length; i++) {
-            if(s_data.name == ($fname.val() + " " + $lname.val())) {
+            if(s_data.name == (fname + " " + lname)) {
 
               var playerContainer = document.createElement("li");
               var playerImage = document.createElement('img');
@@ -31,13 +31,13 @@
               var playerFC = document.createElement('span');
 
               playerContainer.className = "player-box";
-              playerImage.src = "/wp-content/themes/enfold-child/image_proxy.php?url=" . s_data.face;
+              playerImage.src = "/wp-content/themes/enfold-child/image_proxy.php?url=" + s_data.face;
               playerName.innerHTML = s_data.name;
               playerWorld.innerHTML = s_data.world;
               playerFC.innerHTML = s_data.free_company;
 
               $('#field_1_4').after(playerContainer);
-              $('#input_6').val('true');
+              $('#input_6').val(s_data.character_id);
             }
           }
         }
