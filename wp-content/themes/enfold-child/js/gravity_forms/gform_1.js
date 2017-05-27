@@ -1,5 +1,6 @@
 (function($) {
-  var $fName = $('#input_1_4_3')
+  var ajaxurl = '/wp-admin/admin-ajax.php'
+    , $fName = $('#input_1_4_3')
     , $lName = $('#input_1_4_6')
     , $name = $fName.add($lName)
     , $world = $('#input_1_5')
