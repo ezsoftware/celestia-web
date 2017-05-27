@@ -56,8 +56,9 @@ class CW_GravityForms {
   public function add_gform_scripts( $form, $is_ajax=true ) {
     $formId = $form['id'];
     $formPath = get_stylesheet_directory() . '/js/gravity_forms/gform_' . $formId . '.js';
+    $formUri = get_stylesheet_uri() . '/js/gravity_forms/gform_' . $formId . '.js';
     if(file_exists($formPath)) {
-      wp_enqueue_script('gform-' . $formId, $formPath, array(), 1, true);
+      wp_enqueue_script('gform-' . $formId, $formUri, array(), 1, true);
     }
   }
 }
