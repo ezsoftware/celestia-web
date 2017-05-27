@@ -12,7 +12,7 @@
   width: 350px;
   max-width: 100%;
   background-color: white;
-  box-shadow: 0 0 4px white;
+  box-shadow: 0 0 4px white, 5px 5px 3px RGBA(0,0,0,0.5);
   top: calc(50% - 75px);
   position: absolute;
   left: calc(50% - 175px);
@@ -30,7 +30,12 @@
   }
 
   .overlay-text {
-    width: 200px;
+    width: 180px;
     vertical-align: middle;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.4em;
+    text-align: center;
+    margin-left: 10px
   }
 

@@ -41,12 +41,12 @@
               playerWorld.innerHTML = s_data.world;
               playerFC.innerHTML = s_data.free_company;
 
-              $('#field_1_4').after(playerContainer);
+              $(playerContainer).insertAfter($('li#field_1_4'));
               $('#input_6').val(s_data.id);
             }
           }
         }
-        //$('.overlay').remove();
+        $('.overlay').remove();
         console.log(s_data);
       })
       .fail(function(response) {
