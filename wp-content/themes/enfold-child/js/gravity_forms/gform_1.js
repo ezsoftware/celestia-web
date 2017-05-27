@@ -27,22 +27,27 @@
           $found.val('false');
         } else {
           for(var i = 0; i < s_data.length; i++) {
-            if(s_data.name == (fname + " " + lname)) {
-
-              var playerContainer = document.createElement("li");
-              var playerImage = document.createElement('img');
-              var playerName = document.createElement('span');
-              var playerWorld = document.createElement('span');
-              var playerFC = document.createElement('span');
+            var p_data = s_data[i];
+            if(p_data.name == (fname + " " + lname)) {
+              var playerContainer = document.createElement("li")
+                , playerImage = document.createElement('img')
+                , playerName = document.createElement('span')
+                , playerWorld = document.createElement('span')
+                , playerFC = document.createElement('span');
 
               playerContainer.className = "player-box";
-              playerImage.src = "/wp-content/themes/enfold-child/image_proxy.php?url=" + s_data.face;
-              playerName.innerHTML = s_data.name;
-              playerWorld.innerHTML = s_data.world;
-              playerFC.innerHTML = s_data.free_company;
+              playerImage.src = "/wp-content/themes/enfold-child/image_proxy.php?url=" + p_data.face;
+              playerName.innerHTML = p_data.name;
+              playerWorld.innerHTML = p_data.world;
+              playerFC.innerHTML = p_data.free_company;
+
+              playerContainer.appendChild(playerImage);
+              playerContainer.appendChild(playerName);
+              playerContainer.appendChild(playerWorld);
+              playerContainer.appendChild(playerFC);
 
               $(playerContainer).insertAfter($('li#field_1_4'));
-              $('#input_6').val(s_data.id);
+              $('#input_6').val(p_data.id);
             }
           }
         }
