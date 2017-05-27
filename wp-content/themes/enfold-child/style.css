@@ -10,19 +10,19 @@
 */
 
 
-.blank {
+.gfield_password_strength .blank {
   background-color: #444;
   border: 1px solid #222;
 }
 
-.strong {
+.gfield_password_strength .strong {
   background-color: #32CD32;
 }
 
-.good {
+.gfield_password_strength .good {
   background-color: #FFA500;
 }
 
-.bad, .short {
+.gfield_password_strength .bad, .gfield_password_strength .short {
   background-color: #8B0000;
 }
