@@ -15,8 +15,8 @@
 
     var data = {
         action: 'cw_searchCharacter',
-        first_name: fname,
-        last_name: lname,
+        first_name: fname.replace('\'', '{apostrophe}'),
+        last_name: lname.replace('\'', '{apostrophe}'),
         server: world
       };
 
