@@ -36,7 +36,7 @@
                 , playerFC = document.createElement('span');
 
               playerContainer.className = "player-box";
-              playerImage.src = "/wp-content/themes/enfold-child/image_proxy.php?url=" + p_data.face;
+              playerImage.src = "/image_proxy.php?url=" + p_data.face;
               playerName.innerHTML = p_data.name;
               playerWorld.innerHTML = p_data.world;
               playerFC.innerHTML = p_data.free_company;
