@@ -4,7 +4,7 @@
         $url = "";
         if( isset( $_GET['url'] ) )
         {
-            $url = $_GET[ 'url' ];
+            $url = urldecode($_GET[ 'url' ]);
         }
         else
         {
