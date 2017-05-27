@@ -5,6 +5,7 @@ require_once "admin_bar.php";
 require_once "scripts.php";
 require_once "image.php";
 require_once "gravity_forms.php";
+require_once "gravity_forms/index.php";
 
 class CW_Classes {  
   static $instance = null;
@@ -19,5 +20,6 @@ class CW_Classes {
     CW_Admin_Bar::getInstance();
     CW_Image::getInstance();
     CW_GravityForms::getInstance();
+    CW_GForm_Index::getInstance();
   }
 }
