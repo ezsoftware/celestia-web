@@ -11,6 +11,8 @@ class CW_GravityForms {
   }
   private function __construct() {
     add_filter( 'gform_field_content', array($this, 'filter_gf_select_optgroup'), 10, 2 );
+    
+    add_action( 'gform_enqueue_scripts', array($this, 'add_gform_scripts'), 10, 2);
   }
 
   public function filter_gf_select_optgroup( $input, $field ) {
@@ -49,5 +51,12 @@ class CW_GravityForms {
     }
 
     return $input;
+  }
+
+  public function add_gform_scripts( $form, $is_ajax=true ) {
+    $formId = $form['id'];
+    if(file_exists(get_stylesheet_directory() . '/js/gravity_forms/gform_' . $formId)) {
+      wp_enqueue_script('gform-' . $formId, get_stylesheet_directory() . '/js/gravity_forms/gform_' . $formId, array(), 1, true);
+    }
   }
 }
