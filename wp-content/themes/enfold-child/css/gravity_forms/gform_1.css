@@ -12,7 +12,7 @@
   width: 350px;
   max-width: 100%;
   background-color: white;
-  box-shadow: 0 0 4px white, 5px 5px 3px RGBA(0,0,0,0.5);
+  box-shadow: 0 0 4px white;
   top: calc(50% - 75px);
   position: absolute;
   left: calc(50% - 175px);
@@ -39,3 +39,43 @@
     margin-left: 10px
   }
 
+li.player-box {
+    height: 100px;
+}
+
+.player-box > img {
+    border-radius: 20%;
+    box-shadow: 3px 3px 8px RGBA(0,0,0,0.9);
+    border: 2px solid RGBA(0,0,0,0.9);
+    vertical-align: top;
+    float: left;
+}
+
+.player-box > span:nth-child(2) {
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+
+.player-box > span:nth-child(3) {
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.player-box > span:nth-child(3)::before {
+    content: 'Server: ';
+}
+
+.player-box > span {
+    display: block;
+    padding-left: 120px;
+}
+
+.player-box > span:nth-child(4)::before {
+  content: 'FC: ';
+}
+
+.player-box > span:nth-child(4) {
+    font-weight: bold;
+    font-size: 0.8em;
+}
