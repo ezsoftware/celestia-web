@@ -50,6 +50,29 @@
 
               $(playerContainer).insertAfter($('li#field_1_4'));
               $('#input_1_6').val(p_data.id);
+              
+              $.post(ajaxurl, {
+                action: 'cw_getCharacterProfile',
+                character_id: p_data.id
+              }).done(function(char_data_response) {
+                var profile = JSON.parse(char_data_response);
+
+                var profile = document.createElement("li");
+
+                for(var key in profile.classes) {
+                  var classContainer = document.createElement('span')
+                    , className = document.createElement('span')
+                    , classLevel = document.createElement('span');
+                  classContainer.className = 'job-class';
+                  className.innerHTML = key;
+                  classLevel.innerHTML = profile.classes[key];
+                  classContainer.appendChild(className);
+                  classContainer.appendChild(classLevel);
+                  profile.appendChild(classContainer);
+                }
+                $(profile).insertAfter($(playerContainer));
+                $('#input_1_8').val(char_data_response);
+              });
             }
           }
         }
