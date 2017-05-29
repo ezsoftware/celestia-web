@@ -30,34 +30,29 @@
         } else {
           for(var i = 0; i < s_data.length; i++) {
             var p_data = s_data[i];
-            if(p_data.name == (fname + " " + lname)) {
-              var playerContainer = document.createElement("li")
-                , playerImage = document.createElement('img')
-                , playerName = document.createElement('span')
-                , playerWorld = document.createElement('span')
-                , playerFC = document.createElement('span');
-
-              playerContainer.className = "player-box";
-              playerImage.src = "/image_proxy.php?url=" + encodeURIComponent(p_data.face);
-              playerName.innerHTML = p_data.name;
-              playerWorld.innerHTML = p_data.world;
-              playerFC.innerHTML = p_data.free_company;
-
-              playerContainer.appendChild(playerImage);
-              playerContainer.appendChild(playerName);
-              playerContainer.appendChild(playerWorld);
-              playerContainer.appendChild(playerFC);
-
-              $(playerContainer).insertAfter($('li#field_1_4'));
-              $('#input_1_6').val(p_data.id);
-              
+            if(p_data.name == (fname + " " + lname)) {              
               $.post(ajaxurl, {
                 action: 'cw_getCharacterProfile',
                 character_id: p_data.id
               }).done(function(char_data_response) {
-                var profile = JSON.parse(char_data_response);
+                var profile = JSON.parse(char_data_response)
+                  , playerContainer = document.createElement("li")
+                  , playerImage = document.createElement('img')
+                  , playerName = document.createElement('span')
+                  , playerWorld = document.createElement('span')
+                  , playerFC = document.createElement('span')
+                  , profileData = document.createElement('div');
 
-                var profile = document.createElement("li");
+                playerContainer.className = "player-box";
+                playerImage.src = "/image_proxy.php?url=" + encodeURIComponent(p_data.face);
+                playerName.innerHTML = p_data.name;
+                playerWorld.innerHTML = p_data.world;
+                playerFC.innerHTML = p_data.free_company;
+
+                playerContainer.appendChild(playerImage);
+                playerContainer.appendChild(playerName);
+                playerContainer.appendChild(playerWorld);
+                playerContainer.appendChild(playerFC);                
 
                 for(var key in profile.classes) {
                   var classContainer = document.createElement('span')
@@ -68,15 +63,18 @@
                   classLevel.innerHTML = profile.classes[key];
                   classContainer.appendChild(className);
                   classContainer.appendChild(classLevel);
-                  profile.appendChild(classContainer);
+                  profileData.appendChild(classContainer);
                 }
-                $(profile).insertAfter($(playerContainer));
-                $('#input_1_8').val(char_data_response);
+                playerContainer.appendChild(profileData);
+                $(playerContainer).insertAfter($('li#field_1_4'));
+
+                $('#input_1_6').val(p_data.id);
+                $('#input_1_8').val(char_data_response)
+                $('.overlay').remove();
               });
             }
           }
         }
-        $('.overlay').remove();
       })
       .fail(function(response) {
         console.error(response);
