@@ -39,18 +39,27 @@
                   , playerContainer = document.createElement("li")
                   , playerImage = document.createElement('img')
                   , playerName = document.createElement('span')
+                  , playerTitle = document.createElement('span')
                   , playerWorld = document.createElement('span')
                   , playerFC = document.createElement('span')
                   , profileData = document.createElement('div');
 
+                playerName.className = 'player-name';
+                playerTitle.className = 'player-title';
+                playerWorld.className = 'player-world';
+                playerFC.className = 'player-fc';
+                profileData.className = "player-classes";
+
                 playerContainer.className = "player-box";
                 playerImage.src = "/image_proxy.php?url=" + encodeURIComponent(p_data.face);
                 playerName.innerHTML = p_data.name;
+                playerTitle.innerHTML = "&lt;&#8226;" + profile.title + "&gt;&#8226;";
                 playerWorld.innerHTML = p_data.world;
                 playerFC.innerHTML = p_data.free_company;
 
                 playerContainer.appendChild(playerImage);
                 playerContainer.appendChild(playerName);
+                playerContainer.appendChild(playerTitle);
                 playerContainer.appendChild(playerWorld);
                 playerContainer.appendChild(playerFC);                
 

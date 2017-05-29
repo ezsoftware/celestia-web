@@ -52,31 +52,26 @@ li.player-box {
     float: left;
 }
 
-.player-box > span:nth-child(2) {
-    font-weight: bold;
-    font-size: 1.4em;
-}
-
-
-.player-box > span:nth-child(3) {
+.player-box > span {
     font-weight: bold;
     font-size: 0.8em;
-}
-
-.player-box > span:nth-child(3)::before {
-    content: 'Server: ';
-}
-
-.player-box > span {
     display: block;
     padding-left: 120px;
 }
 
-.player-box > span:nth-child(4)::before {
-  content: 'FC: ';
+.player-box > span.player-name {
+    font-size: 1.4em;
 }
 
-.player-box > span:nth-child(4) {
-    font-weight: bold;
-    font-size: 0.8em;
+.player-box > span.player-world::before {
+    content: 'Server: ';
+}
+
+.player-box > span.player-fc::before {
+    content: 'FC: ';
+}
+
+.player-box > div.player-classes {
+    float: left;
+    clear: both;
 }
