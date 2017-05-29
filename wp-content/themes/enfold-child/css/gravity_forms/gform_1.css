@@ -75,3 +75,19 @@ li.player-box {
     float: left;
     clear: both;
 }
+
+span.job-class {
+    width: 100px;
+    display: inline-block;
+    margin: 0;
+    font-size: 0.8em;
+    white-space: nowrap;
+    font-weight: bold;
+    border-right: 1px dotted RGBA(0,0,0,0.5);
+    border-bottom: 1px dotted RGBA(0,0,0,0.5);
+}
+
+span.job-class > span {
+    display: block;
+    text-align: center;
+}

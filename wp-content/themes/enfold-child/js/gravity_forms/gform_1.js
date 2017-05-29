@@ -53,7 +53,7 @@
                 playerContainer.className = "player-box";
                 playerImage.src = "/image_proxy.php?url=" + encodeURIComponent(p_data.face);
                 playerName.innerHTML = p_data.name;
-                playerTitle.innerHTML = "&lt;&#8226;" + profile.title + "&gt;&#8226;";
+                playerTitle.innerHTML = "&lt;&#8226; " + profile.title + " ;&#8226;&gt";
                 playerWorld.innerHTML = p_data.world;
                 playerFC.innerHTML = p_data.free_company;
 
