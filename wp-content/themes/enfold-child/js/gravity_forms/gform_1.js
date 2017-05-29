@@ -14,6 +14,7 @@
     $(overlay).appendTo($('body'));
     $('li.player-box').remove();
     $('#input_1_6').val('');
+    $('#input_1_8').val('');
 
     var data = {
         action: 'cw_searchCharacter',
