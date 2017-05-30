@@ -57,6 +57,7 @@ li.player-box {
     font-size: 1em;
     display: block;
     padding-left: 120px;
+    line-height: 26px;
 }
 
 .player-box > span.player-name {
