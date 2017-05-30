@@ -10,7 +10,7 @@ class CW_GForm_1 {
     return self::$instance;
   }
   private function __construct() {
-    add_filter('gform_field_validation_1_4', array($this, 'form_1_4_validation'), 10, 4);
+    add_filter('gform_field_validation_1_4', array($this, 'form_1_4_validation'), 99, 4);
   }
 
   public function form_1_4_validation($result, $value, $form, $field) {
