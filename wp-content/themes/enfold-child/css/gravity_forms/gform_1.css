@@ -83,8 +83,8 @@ span.job-class {
     font-size: 0.9em;
     white-space: nowrap;
     font-weight: bold;
-    border-right: 1px dotted RGBA(0,0,0,0.5);
-    border-bottom: 1px dotted RGBA(0,0,0,0.5);
+    border-right: 1px dotted RGBA(128,128,128,1);
+    border-bottom: 1px dotted RGBA(128,128,128,1);
 }
 
 span.job-class > span {
