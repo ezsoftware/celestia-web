@@ -47,5 +47,7 @@ class CW_GForm_1 {
         }
       }
     }
+    $validation_result['form'] = $form;
+    return $validation_result;
   }
 }
