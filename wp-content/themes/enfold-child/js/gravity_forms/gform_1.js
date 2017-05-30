@@ -28,6 +28,7 @@
         var s_data = JSON.parse(response);
         if(s_data.length == 0) {
           $found.val('false');
+          $('.overlay').remove();
         } else {
           for(var i = 0; i < s_data.length; i++) {
             var p_data = s_data[i];
