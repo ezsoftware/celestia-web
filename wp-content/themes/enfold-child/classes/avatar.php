@@ -12,7 +12,7 @@ class CW_Avatar {
   private function __construct() {
     add_filter('pre_get_avatar', array($this, 'get_user_avatar_url'), 10, 3);
 
-    do_action('update_avatar', array($this, 'update_user_avatar'), 10, 2);
+    add_action('update_avatar', array($this, 'update_user_avatar'), 10, 2);
   }
 
   public function get_user_avatar_url($avatar, $id_or_email, $args) {
