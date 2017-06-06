@@ -31,3 +31,10 @@ div#input_1_3_strength_indicator {
 #input_1_3_strength_indicator.gfield_password_strength.bad, #input_1_3_strength_indicator.gfield_password_strength.short {
   background-color: #8B0000;
 }
+
+.iframe-full-screen {
+  width: 100%;
+  min-height: 80vh;
+  max-height: 100vh;
+  height: auto;
+}
