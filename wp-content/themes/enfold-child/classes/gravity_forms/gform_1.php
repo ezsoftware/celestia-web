@@ -28,7 +28,7 @@ class CW_GForm_1 {
 
   public function form_1_validation($validation_result) {
     $form = $validation_result['form'];
-
+    
     if( preg_match("[^A-Za-z0-9\s_\-\']", rgpost('input_1_4_3')) || preg_match("[^A-Za-z0-9\s_\-\']", rgpost('input_1_4_6')) )  {
       $validation_result['is_valid'] = false;
       foreach( $form['fields'] as &$field) {
@@ -39,13 +39,16 @@ class CW_GForm_1 {
         }
       }
     } else {
+      $isValid = true;
       foreach( $form['fields'] as &$field) {
         if($field->id == '4') {
           $field->failed_validation = false;
           $field->validation_message = null;
           break;
         }
+        $isValid = $isValid && !$field->failed_validation;
       }
+      $validation_result['is_valid'] = $isValid;
     }
     $validation_result['form'] = $form;
     return $validation_result;
