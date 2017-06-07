@@ -30,9 +30,11 @@
           $found.val('false');
           $('.overlay').remove();
         } else {
+          var bFound = false;
           for(var i = 0; i < s_data.length; i++) {
             var p_data = s_data[i];
-            if(p_data.name == (fname + " " + lname)) {              
+            if(p_data.name == (fname + " " + lname)) {  
+              bFound = true;            
               $.post(ajaxurl, {
                 action: 'cw_getCharacterProfile',
                 character_id: p_data.id
@@ -84,6 +86,12 @@
                 $('.overlay').remove();
               });
             }
+          }
+          if(!bFound) {
+            var playerContainer = document.createElement("li");
+            playerContainer.innerHTML = "Player Character Not Found... Please try again.";
+            $(playerContainer).insertAfter($('li#field_1_4'));
+            $('.overlay').remove();
           }
         }
       })
