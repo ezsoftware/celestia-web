@@ -32,9 +32,6 @@ div#input_1_3_strength_indicator {
   background-color: #8B0000;
 }
 
-.iframe-full-screen {
-  width: 100%;
-  min-height: 80vh;
-  max-height: 100vh;
-  height: auto;
+div#chat {
+  float: right;
 }
