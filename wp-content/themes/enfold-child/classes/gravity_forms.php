@@ -29,24 +29,26 @@ class CW_GravityForms {
       $opt_group_regex = "/<\s*?option\s*?value='optgroup\b[^>]*>([^<>]+)<\/option\b[^>]*>/i";
 
       preg_match($opt_regex, $input, $opt_values);
-      $split_options = preg_split($opt_group_regex, $opt_values[1]);
-      $optgroup_found = count($split_options) > 1;
+      if(count($opt_values) > 1) {
+        $split_options = preg_split($opt_group_regex, $opt_values[1]);
+        $optgroup_found = count($split_options) > 1;
 
-      // sometimes first item in the split is blank
-      if( strlen($split_options[0]) < 1 ){
-        unset($split_options[0]);
-        $split_options = array_values( $split_options );
-      }
-
-      if( $optgroup_found ){
-        $fixed_options = '';
-        preg_match_all($opt_group_regex, $opt_values[1], $opt_group_match);
-        if( count($opt_group_match) > 1 ){
-          foreach( $split_options as $index => $option ){
-            $fixed_options .= "<optgroup label='" . $opt_group_match[1][$index] . "'>" . $option . '</optgroup>';
-          }
+        // sometimes first item in the split is blank
+        if( strlen($split_options[0]) < 1 ){
+          unset($split_options[0]);
+          $split_options = array_values( $split_options );
         }
-        $input = str_replace($opt_values[1], $fixed_options, $input);
+
+        if( $optgroup_found ){
+          $fixed_options = '';
+          preg_match_all($opt_group_regex, $opt_values[1], $opt_group_match);
+          if( count($opt_group_match) > 1 ){
+            foreach( $split_options as $index => $option ){
+              $fixed_options .= "<optgroup label='" . $opt_group_match[1][$index] . "'>" . $option . '</optgroup>';
+            }
+          }
+          $input = str_replace($opt_values[1], $fixed_options, $input);
+        }
       }
     }
 
