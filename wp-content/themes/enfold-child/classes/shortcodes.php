@@ -13,7 +13,7 @@ class CW_Shortcodes {
     add_shortcode("members_not_logged_in", array($this, 'members_not_logged_in_shortcode'));
   }
 
-  public function members_not_logged_in_shortcode($content) {
+  public function members_not_logged_in_shortcode($attr, $content) {
     return is_feed() || is_user_logged_in() || is_null( $content ) ? '' : do_shortcode( $content );
   }
 }
