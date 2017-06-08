@@ -88,17 +88,19 @@
             }
           }
           if(!bFound) {
+            console.log('here');
             var playerContainer = document.createElement("li");
             playerContainer.className = 'player-box';
             playerContainer.innerHTML = "<span>Player Character Not Found... Please try again.</span>";
             $(playerContainer).insertAfter($('li#field_1_4'));
+            console.log(playerContainer);
             $('.overlay').remove();
           }
         }
       })
       .fail(function(response) {
         console.error(response);
-      })
+      });
   }
 
   $name.blur(_.debounce(function() {
