@@ -87,6 +87,7 @@
               });
             }
           }
+          console.log(bfound);
           if(!bFound) {
             console.log('here');
             var playerContainer = document.createElement("li");
