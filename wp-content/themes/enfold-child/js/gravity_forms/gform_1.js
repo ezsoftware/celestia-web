@@ -89,6 +89,7 @@
           }
           if(!bFound) {
             var playerContainer = document.createElement("li");
+            playerContainer.className = 'player-box';
             playerContainer.innerHTML = "Player Character Not Found... Please try again.";
             $(playerContainer).insertAfter($('li#field_1_4'));
             $('.overlay').remove();
