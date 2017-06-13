@@ -81,6 +81,7 @@
               $('#input_1_8').val(char_data_response)
               $('.overlay').remove();
             });
+			      break;
           }
         }
         if(!bFound) {

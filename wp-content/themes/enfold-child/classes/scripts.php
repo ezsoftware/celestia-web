@@ -20,6 +20,6 @@ class CW_Scripts {
 	}
 
   public function admin_enqueue_styles() {
-    wp_enqueue_style( 'admin-style', get_template_directory_uri() . '/admin_style.css');
+    wp_enqueue_style( 'admin-style', get_stylesheet_directory_uri() . '/admin_style.css');
   }
 }
