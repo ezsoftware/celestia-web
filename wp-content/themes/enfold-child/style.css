@@ -42,3 +42,8 @@ div#chat {
 .bbp-topics-front ul.super-sticky, .bbp-topics ul.super-sticky, .bbp-topics ul.sticky, .bbp-forum-content ul.sticky {
     background-color: RGBA(255,0,0,0.3) !important;
 }
+.menu-item img.avatar.avatar-16.photo {
+    border: 1px solid RGBA(255,255,255,0.5);
+    vertical-align: middle;
+    margin-top: -4px;
+}
