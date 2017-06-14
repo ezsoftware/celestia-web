@@ -20,6 +20,9 @@ class CW_NavMenu {
         $items = str_replace('{' . $key . '}', $value, $items);
       }
     }
+    $name = explode(' ', $user->data->display_name);
+    $items = str_replace('{firstname}', $name[0], $items);
+    $items = str_replace('{lastname}', $name[1], $items);
 	  $items = str_replace('{avatar}', get_avatar($user->ID, 16), $items);
     return $items;
   }
