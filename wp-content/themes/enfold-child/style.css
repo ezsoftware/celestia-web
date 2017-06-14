@@ -43,7 +43,8 @@ div#chat {
     background-color: RGBA(255,0,0,0.3) !important;
 }
 .menu-item img.avatar.avatar-16.photo {
-    border: 1px solid RGBA(255,255,255,0.5);
     vertical-align: middle;
     margin-top: -4px;
+    box-shadow: 0 0 1px 2px RGBA(255,255,255,0.5);
+    border-radius: 3px;
 }
