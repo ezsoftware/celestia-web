@@ -10,13 +10,15 @@ class CW_NavMenu {
     return self::$instance;
   }
   private function __construct() {
-    add_filter( 'wp_nav_menu_items', array($this, 'cw_nav_item_dynamics'));
+    add_filter( 'wp_nav_menu_items', array($this, 'cw_nav_item_dynamics'), 10, 2);
   }
 
   public function cw_nav_item_dynamics($items, $args) {
     $user = wp_get_current_user();
-    foreach($user as $key => $value) {
-      $items = str_replace('{' . $key . '}', $value, $items);
+    foreach($user->data as $key => $value) {
+      if(!is_object($value) && !is_array($value)) {
+        $items = str_replace('{' . $key . '}', $value, $items);
+      }
     }
     return $items;
   }
