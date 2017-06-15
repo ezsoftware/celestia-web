@@ -25,8 +25,10 @@ class CW_NavMenu {
     }
     if($user && $user->data && $user->data->display_name)
       $name = explode(' ', $user->data->display_name);
-    else
+    else {
       $name = array('Guest', '');
+      $items = str_replace('{display_name}', 'Guest');
+    }
     $items = str_replace('{firstname}', $name[0], $items);
     $items = str_replace('{lastname}', $name[1], $items);
 	  $items = str_replace('{avatar}', get_avatar($user->ID, 16), $items);
