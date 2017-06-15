@@ -81,7 +81,7 @@ div#fep-header {
     background-color: RGB(64,64,64);
 }
 
-.fep-odd-even > div:nth-child(odd) {
+.fep-odd-even > div:nth-child(even) {
     background-color: RGB(32,32,32);
 }
 
@@ -89,4 +89,29 @@ div#fep-header {
 	border-color:RGBA(64,64,64,1);
 	background-color: RGB(32,32,32);
 	color: white;
+}
+
+#top .av-main-nav ul a.menu-unread-count, .av-main-nav > li > a.menu-unread-count{
+	width:auto;
+	height:auto;
+	float:inherit;
+	clear:both;
+	text-align:inherit;
+	line-height:inherit;
+	padding:0;
+	font-size: inherit;
+	min-height: 0;
+	max-width: none;
+	text-decoration: none;
+	font-family: inherit;
+	display: inline-block;
+	margin: 0;
+}
+
+span.menu-unread-count {
+  margin: 0 2px;
+  padding: 0 4px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
 }
