@@ -7,6 +7,7 @@ require_once "image.php";
 require_once "shortcodes.php";
 require_once "gravity_forms.php";
 require_once "gravity_forms/index.php";
+require_once "nav_menu.php";
 
 class CW_Classes {  
   static $instance = null;
@@ -23,5 +24,6 @@ class CW_Classes {
     CW_Shortcodes::getInstance();
     CW_GravityForms::getInstance();
     CW_GForm_Index::getInstance();
+    CW_NavMenu::getInstance();
   }
 }
