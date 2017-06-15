@@ -42,3 +42,51 @@ div#chat {
 .bbp-topics-front ul.super-sticky, .bbp-topics ul.super-sticky, .bbp-topics ul.sticky, .bbp-forum-content ul.sticky {
     background-color: RGBA(255,0,0,0.3) !important;
 }
+.menu-item img.avatar.avatar-16.photo {
+    vertical-align: middle;
+    margin-top: -4px;
+    box-shadow: 0 0 1px 2px RGBA(255,255,255,0.5);
+    border-radius: 3px;
+}
+
+
+div#fep-header {
+    color: inherit;
+}
+
+#fep-menu .fep-button, .fep-button, .fep-button-active {
+    border-color: RGB(192,0,0);
+    background-color: RGB(128,0,0);
+    color: #FFF !important;
+}
+
+#fep-menu .fep-button:hover, .fep-button-active {
+    background-color: RGB(192,0,0);
+}
+
+.fep-error {
+    background-color: RGB(192,64,64);
+    font-weight: bold;
+}
+
+#fep-content a {
+    color: RGB(255,0,0);
+}
+
+#fep-content {
+    color: white !important;
+}
+
+.fep-odd-even > div:nth-child(odd) {
+    background-color: RGB(64,64,64);
+}
+
+.fep-odd-even > div:nth-child(odd) {
+    background-color: RGB(32,32,32);
+}
+
+.fep-message .fep-message-title-heading, .fep-per-message .fep-message-title {
+	border-color:RGBA(64,64,64,1);
+	background-color: RGB(32,32,32);
+	color: white;
+}
