@@ -27,7 +27,7 @@ class CW_NavMenu {
     $items = str_replace('{firstname}', $name[0], $items);
     $items = str_replace('{lastname}', $name[1], $items);
 	  $items = str_replace('{avatar}', get_avatar($user->ID, 16), $items);
-    $items = str_replace('{undread_messages}', $unread_count > 0 ? '<a href="/private-messages/" class="menu-unread-count">' . $unread_count . '</a>' : '');
+    $items = str_replace('{undread_messages}', $unread_count > 0 ? '<a href="/private-messages/" class="menu-unread-count">' . $unread_count . '</a>' : '', $items);
     return $items;
   }
 }
