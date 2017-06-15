@@ -23,7 +23,7 @@ class CW_NavMenu {
         $items = str_replace('{' . $key . '}', $value, $items);
       }
     }
-    if($user->data->display_name)
+    if($user && $user->data && $user->data->display_name)
       $name = explode(' ', $user->data->display_name);
     else
       $name = array('Guest', '');
