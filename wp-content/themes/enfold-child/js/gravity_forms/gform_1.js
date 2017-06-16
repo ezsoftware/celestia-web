@@ -78,7 +78,7 @@
               $(playerContainer).insertAfter($('li#field_1_4'));
 
               $('#input_1_6').val(p_data.id);
-              $('#input_1_8').val(char_data_response)
+              $('#input_1_8').val(char_data_response);
               $('.overlay').remove();
             });
 			      break;

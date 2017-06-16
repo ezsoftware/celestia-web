@@ -48,3 +48,70 @@ div#chat {
     box-shadow: 0 0 1px 2px RGBA(255,255,255,0.5);
     border-radius: 3px;
 }
+
+
+div#fep-header {
+    color: inherit;
+}
+
+#fep-menu .fep-button, .fep-button, .fep-button-active {
+    border-color: RGB(192,0,0);
+    background-color: RGB(128,0,0);
+    color: #FFF !important;
+}
+
+#fep-menu .fep-button:hover, .fep-button-active {
+    background-color: RGB(192,0,0);
+}
+
+.fep-error {
+    background-color: RGB(192,64,64);
+    font-weight: bold;
+}
+
+#fep-content a {
+    color: RGB(255,0,0);
+}
+
+#fep-content {
+    color: white !important;
+}
+
+.fep-odd-even > div:nth-child(odd) {
+    background-color: RGB(64,64,64);
+}
+
+.fep-odd-even > div:nth-child(even) {
+    background-color: RGB(32,32,32);
+}
+
+.fep-message .fep-message-title-heading, .fep-per-message .fep-message-title {
+	border-color:RGBA(64,64,64,1);
+	background-color: RGB(32,32,32);
+	color: white;
+}
+
+#top .av-main-nav ul a.menu-unread-count, .av-main-nav > li > a.menu-unread-count{
+	width:auto;
+	height:auto;
+	float:inherit;
+	clear:both;
+	text-align:inherit;
+	line-height:inherit;
+	padding:0;
+	font-size: inherit;
+	min-height: 0;
+	max-width: none;
+	text-decoration: none;
+	font-family: inherit;
+	display: inline-block;
+	margin: 0;
+}
+
+span.menu-unread-count {
+  margin: 0 2px;
+  padding: 0 4px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+}
