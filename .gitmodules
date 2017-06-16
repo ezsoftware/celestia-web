@@ -4,3 +4,6 @@
 [submodule "wp-content/plugins/celestia-web-lodestone"]
 	path = wp-content/plugins/celestia-web-lodestone
 	url = https://github.com/ezsoftware/celestia-web-lodestone-plugin.git
+[submodule "wp-content/plugins/celestia-web-duty-finder"]
+	path = wp-content/plugins/celestia-web-duty-finder
+	url = https://github.com/ezsoftware/celestia-web-duty-finder.git
