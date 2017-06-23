@@ -115,3 +115,7 @@ span.menu-unread-count {
   border-radius: 50%;
   color: white;
 }
+
+li.d4p-bbp-attachment {
+	display: inline-block;
+}
