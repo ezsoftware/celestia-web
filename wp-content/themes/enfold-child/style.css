@@ -116,6 +116,7 @@ span.menu-unread-count {
   color: white;
 }
 
-li.d4p-bbp-attachment {
+#bbpress-forums .bbp-attachments li.d4p-bbp-attachment {
 	display: inline-block;
+	margin-right: 20px !important;
 }
