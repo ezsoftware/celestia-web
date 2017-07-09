@@ -92,9 +92,3 @@ span.job-class > span {
     display: block;
     text-align: center;
 }
-
-@media screen and (max-width:768px) {
-    .player-box > div.player-classes {
-        display: none;
-    }
-}
