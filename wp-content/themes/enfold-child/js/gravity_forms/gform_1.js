@@ -68,7 +68,7 @@
                   //, className = document.createElement('span')
                   , classLevel = document.createElement('span')
                   , keys = key.split('/')
-                  , classJob = keys.toString().trim().toLowerCase();
+                  , classJob = keys.toString().trim().toLowerCase().replace(' ', '_');
                 classContainer.className = 'class-level ' + classJob + (profile.classes[key] >= 70 ? ' capped' : '');
                 classContainer.setAttribute('title', key);
                 //className.innerHTML = key;
