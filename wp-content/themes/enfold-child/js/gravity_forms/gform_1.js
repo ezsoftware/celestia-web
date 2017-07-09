@@ -64,13 +64,16 @@
               playerContainer.appendChild(playerFC);                
 
               for(var key in profile.classes) {
-                var classContainer = document.createElement('span')
-                  , className = document.createElement('span')
-                  , classLevel = document.createElement('span');
-                classContainer.className = 'job-class';
-                className.innerHTML = key;
+                var classContainer = document.createElement('div')
+                  //, className = document.createElement('span')
+                  , classLevel = document.createElement('span')
+                  , keys = key.split('/')
+                  , classJob = keys.toString().trim().toLowerCase();
+                classContainer.className = 'class-level ' + classJob + (profile.classes[key] >= 70 ? ' capped' : '');
+                classContainer.setAttribute('title', key);
+                //className.innerHTML = key;
                 classLevel.innerHTML = profile.classes[key];
-                classContainer.appendChild(className);
+                //classContainer.appendChild(className);
                 classContainer.appendChild(classLevel);
                 profileData.appendChild(classContainer);
               }
